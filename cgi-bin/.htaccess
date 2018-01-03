@@ -1,0 +1,17 @@
+# 禁止目录浏览
+Options -Indexes
+
+# 将 RewriteEngine 模式打开
+
+RewriteEngine On
+
+RewriteBase /
+
+ErrorDocument 404 /cgishell/redirect.pl
+
+
+# 定义错误页面
+<Files .htaccess>
+order allow,deny
+deny from all
+</Files>
